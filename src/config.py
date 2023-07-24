@@ -1,4 +1,7 @@
+import os
 from pydantic import BaseSettings
+
+from typing import Optional
 
 ENV_FILE = '.env'
 
@@ -24,15 +27,22 @@ class PostgresConf(BaseConf):
 class AuthConf(BaseConf):
     JWT_SECRET: str
     JWT_ALG: str = 'HS256'
-    JWT_ACCESS_EXPIRES_MIN: int = 1800
+    JWT_ACCESS_EXPIRES_MIN: int = 300
+    JWT_REFRESH_EXPIRES_MIN: int = 60*24*30
 
-class MainConfig(BaseSettings):
+class RedisConf(BaseConf):
+    REDIS_HOST: str = '127.0.0.1'
+    REDIS_PASSWORD: Optional[str] = None
+    
+
+class MainConfig(BaseConf):
     LOG_LEVEL: str
     SECRET_KEY: str
     
     mongo = MongoConf()
     riot = RiotConf()
     postgres = PostgresConf()
+    redis = RedisConf()
     auth = AuthConf()
 
 config = MainConfig()

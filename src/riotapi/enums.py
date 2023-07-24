@@ -1,10 +1,10 @@
-QUEUEMODES = [
+QUEUEMODES_ENUM = [
     "RANKED_SOLO_5x5",
     "RANKED_FLEX_SR",
     "RANKED_FLEX_TT"
 ]
 
-TIER = [
+TIER_ENUM = [
     'DIAMOND',
     'PLATINUM',
     'GOLD',
@@ -13,14 +13,14 @@ TIER = [
     'IRON'
 ]
 
-DIVISION = [
+DIVISION_ENUM = [
     'I',
     'II',
     'III',
     'IV'
 ]
 
-REGION = [
+REGION_ENUM = [
     'br1',
     'eun1',
     'euw1',
@@ -45,4 +45,19 @@ QUEUEIDS = [
     440 # 5v5 Flex ranked
 ]
 
+SUMMONER_NAME_REGEX = r"^(?!_)\w.*"
+
+ACCOUNTID = 'accountId'
+PUUID = 'puuid'
+SUMMONERID = 'summonerId'
+NAME = 'name'
+ID = 'id'
+REGION = 'region'
+
+PLAYER_IDENTITY_FIELDS = [
+        SUMMONERID,
+        NAME,
+        ACCOUNTID,
+        PUUID,
+    ]
 

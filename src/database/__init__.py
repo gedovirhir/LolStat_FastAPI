@@ -1,1 +1,5 @@
-from .core import Base, SessionLocal, DbSession
+from .core import (Base, 
+                   SessionLocal, 
+                   DbSession,
+                   AutocommitSession
+                   )

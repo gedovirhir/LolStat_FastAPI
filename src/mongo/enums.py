@@ -1,3 +1,3 @@
 PLAYERS = 'players'
 MATCHES = 'matches'
-RANKED_PLAYERS = 'ranked_solo_players'
+LEAGUE_ENTRIES = 'league_entries'
